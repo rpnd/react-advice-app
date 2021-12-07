@@ -1,38 +1,115 @@
-.App {
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100%;
+  background: url(12.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.card {
+  /* This was made with GlassGenerator.netlify.app */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 700px;
+  height: 375px;
+  color: rgb(202, 202, 202);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 20px;
+  border-radius: 90px 0px 0px 0px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 1px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 1px rgba(40, 40, 40, 0.35) solid;
+  border-right: 1px rgba(40, 40, 40, 0.35) solid;
+}
+
+.heading {
+  display: flex;
+
+  align-items: center;
+  height: 580px;
+  font-family: serif;
+}
+
+.button{
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+
+  justify-content: center;align-items: center;text-transform: uppercase;height: 200px;
+  width: 210px;opacity: 1;background-color: #ffffff;
+}
+button {
+  border: none;
+  display: block;
+  bottom: 5vh;
+  position: absolute;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(2, 4, 8);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+ }
+ 
+ button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(77, 77, 77);
+ }
+ 
+ button span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 1.3s;
+ }
+ 
+ button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(12, 12, 14);
+ }
+ 
+ button:hover {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ }
+ 
+ button:active span::before {
+  background: #2751cd;
+ }
+ @media only screen and (max-width:600px) {
+  button{
+    bottom: 1vh;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ }
