@@ -1,4 +1,5 @@
 live=>https://rpnd.github.io/react-advice-app/
+![Screenshot (62)](https://user-images.githubusercontent.com/74759697/147086889-948bd30f-56cb-40b4-86e6-28217be197ae.png)
 
 # Getting Started with Create React App
 
